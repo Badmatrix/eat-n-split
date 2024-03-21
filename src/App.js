@@ -39,7 +39,7 @@ function App() {
     setDisplayAddForm(false);
   }
   function handleSplitBill(value) {
-    console.log(value);
+    // console.log(value);
     setFriends((friends) =>
       friends.map((friend) =>
         friend.id === selectedFriend.id
@@ -66,6 +66,7 @@ function App() {
         <FormSplitBill
           selectedFriend={selectedFriend}
           handleSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
